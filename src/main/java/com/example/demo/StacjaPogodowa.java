@@ -8,14 +8,14 @@ import java.util.Random;
 @Component
 public class StacjaPogodowa {
     private String info;
-    private int temp;
+    private Integer temp;
 
 
-    @Autowired
+
 
     public int getTemp() {
         int i = 0;
-        if (info == null) {
+        if (temp == null) {
             System.out.println("Pobieram informacje pogodowe");
             i++;
         }
@@ -32,8 +32,8 @@ public class StacjaPogodowa {
         return random.nextInt(60) - 25;
     }
 
-    public String getInfo(StacjaPogodowa stacjaPogodowa) {
-        if (stacjaPogodowa.temp > 15) {
+    public String getInfo() {
+        if (this.temp > 15) {
             return info = "slonecznie";
         }
         return info = "pochmurno";

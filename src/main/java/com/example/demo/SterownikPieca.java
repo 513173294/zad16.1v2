@@ -11,8 +11,8 @@ public class SterownikPieca {
         this.stacjaPogodowa = stacjaPogodowa;
     }
 
-    @Autowired
-    public void steruj(StacjaPogodowa stacjaPogodowa) {
+
+    public void steruj() {
         int temp = stacjaPogodowa.getTemp();
         if (temp < 15) {
             System.out.println("Jest zimno wlaczam piec " );

@@ -11,9 +11,9 @@ private StacjaPogodowa stacjaPogodowa;
         this.stacjaPogodowa = stacjaPogodowa;
     }
 
-    @Autowired
-    public void steruj(StacjaPogodowa stacjaPogodowa) {
-        String info = stacjaPogodowa.getInfo(stacjaPogodowa);
+
+    public void steruj() {
+        String info = stacjaPogodowa.getInfo();
         int temp = stacjaPogodowa.getTemp();
         if ("slonecznie".equals(info)) {
             System.out.println("Zaslaniam rolety, Jest " + info);

@@ -12,9 +12,9 @@ public class SterownikGlosnika {
         this.stacjaPogodowa = stacjaPogodowa;
     }
 
-    @Autowired
-    public void steruj(StacjaPogodowa stacjaPogodowa) {
-        String info = stacjaPogodowa.getInfo(stacjaPogodowa);
+
+    public void steruj() {
+        String info = stacjaPogodowa.getInfo();
         int temp = stacjaPogodowa.getTemp();
         System.out.println("Dzien dobry! Dzisiejsza temperatura to " + temp + "*C i jest " + info + ". To bedzie dobry dzien!");
     }
