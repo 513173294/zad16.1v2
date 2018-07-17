@@ -7,11 +7,9 @@ import java.util.Random;
 
 @Component
 public class StacjaPogodowa {
+
     private String info;
     private Integer temp;
-
-
-
 
     public int getTemp() {
         int i = 0;
@@ -19,23 +17,35 @@ public class StacjaPogodowa {
             System.out.println("Pobieram informacje pogodowe");
             i++;
         }
-         if (i!=0&&i<2) {
+        if (i != 0 && i < 2) {
             int losowa = getLosowa();
-
-            return temp = losowa;
+            temp=losowa;
+            if (temp > 10) {
+                System.out.println("1");
+                  info = "slonecznie";
+            } else {
+                System.out.println("2");
+                info = "pochmurno";
+            }
+            return
+                    temp ; //=losowa;
         }
         return temp;
     }
 
     private int getLosowa() {
         Random random = new Random();
-        return random.nextInt(60) - 25;
+        return temp=random.nextInt(60) - 25;
     }
 
     public String getInfo() {
-        if (this.temp > 15) {
-            return info = "slonecznie";
-        }
-        return info = "pochmurno";
+        return info;
     }
+    //    public String getInfo() {
+//
+//        if (this.temp > 15) {
+//            return info = "slonecznie";
+//        }
+//        return info = "pochmurno";
+//    }
 }

@@ -14,8 +14,8 @@ public class SterownikGlosnika {
 
 
     public void steruj() {
-        String info = stacjaPogodowa.getInfo();
         int temp = stacjaPogodowa.getTemp();
+        String info = stacjaPogodowa.getInfo();
         System.out.println("Dzien dobry! Dzisiejsza temperatura to " + temp + "*C i jest " + info + ". To bedzie dobry dzien!");
     }
 }
